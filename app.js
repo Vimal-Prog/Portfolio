@@ -28,3 +28,6 @@ menu_item.forEach((item) => {
 function Loader(){
 	loader.style.display = 'none';
 }
+function down(){
+	console.log("Setup")
+}

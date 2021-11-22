@@ -258,6 +258,23 @@ p{
 #header .hamberger.active .bar::after {
 	top: 0;
 }
+#header .downloadpage{
+    padding-top: 600px;
+    padding-left: 90%;    
+}
+#header .ickn{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /* End Of Header Section */
 /* Top Section */
 #top{
@@ -658,6 +675,109 @@ p{
     box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3) ;
 }
 /* End Of Education Section */
+/* Experience Section */
+#exp .container {
+    min-height: 120vh;
+    background: #000;
+    width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#exp .edu-bottom{
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+    box-sizing: border-box;
+}
+#exp .edu-bottom::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #c5c5c5;
+}
+#exp .edu-bottom ul{
+    margin: 0;
+    padding: 0;
+}
+#exp .edu-bottom ul li{
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+#exp .edu-bottom ul li:nth-child(odd){
+    float: left;
+    text-align: right;
+    clear: both;
+}
+#exp .edu-bottom ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.content{
+    padding: 20px;
+}
+#exp .edu-bottom ul li:nth-child(odd)::before{
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgba(233, 33, 99, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2) ;
+}
+#exp .edu-bottom ul li:nth-child(even)::before{
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: rgba(233, 33, 99, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2) ;
+}
+.content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    color:rgba(233, 33, 99, 1) ;
+}
+.time h4{
+    font-size: 14px;
+}
+#exp .edu-bottom ul li:nth-child(odd) .time{
+    position: absolute;
+    top: 12px;
+    right: -155px;
+    margin: 0;
+    padding: 8px 16px;
+    background-image:linear-gradient(315deg,#0cbaba 10%,#380036 74%) ;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3) ;
+}
+#exp .edu-bottom ul li:nth-child(even) .time{
+    position: absolute;
+    top: 12px;
+    left: -155px;
+    margin: 0;
+    padding: 8px 16px;
+    background-image:linear-gradient(315deg,#0cbaba 10%,#380036 74%) ;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.3) ;
+}
+/* End of Experience Section */
 /* About Me Section */
 #about {
     background: #000;
