@@ -1,1 +1,27 @@
+name: Static Application Deploy To VM CI/CD
 
+on: 
+  push:
+    branches:
+      - main 
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      -main
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Copy website files to the server's document root
+        with:
+          host: ${{secrets.secrets.HOST_IPV4_ADDRESS}}
+          Username: ${{secrets.HOST_USER_NAME}}
+          Password: ${{secrets.HOST_PASSWORD}}
+          source: "/"
+          target: "/var/testdep"
+          
