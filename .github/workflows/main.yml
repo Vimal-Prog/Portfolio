@@ -15,12 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
         with:
           submodules: true
       - name: Copy website files to the server's document root
         with:
-          uses: actions/checkout@v2
           host: ${{secrets.secrets.HOST_IPV4_ADDRESS}}
           Username: ${{secrets.HOST_USER_NAME}}
           Password: ${{secrets.HOST_PASSWORD}}
